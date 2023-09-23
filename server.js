@@ -15,14 +15,14 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 Routing code
-app.get('/',(req,res)=>{
-  res.render('harid.ejs')
+app.get('/',(req,res) => {
+  res.render('harid.ejs');
 })
-
-app.post('/create-form',(req,res)=>{
-  console.log(req.body)
-  res.send(req.body)
   // res.json({test:"success"})
+app.post('/create-form',(req,res) => {
+  console.log(req.body);
+  res.send(req.body);
+
 })
 
 const server = http.createServer(app);
