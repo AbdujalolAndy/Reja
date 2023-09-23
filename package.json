@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev":"nodemon server.js",
-    "train":"nodemon train.js"
+    "dev": "nodemon server.js",
+    "train": "nodemon train.js"
   },
   "author": "\"BekhzodAli\"",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
     "nodemon": "^3.0.1"
