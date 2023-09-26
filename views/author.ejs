@@ -1,1 +1,358 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/author.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Portfolio</title>
+    
+</head>
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1_1">
+                        <img src="/author/images/Profile.png" width="156px" height="142px">
+                    </div>
+                    <div class="left_1_2">
+                        <%- user.name%>
+                    </div>
+                    <div class="left_1_3">
+                        <%- user.profession %>
+                    </div>
+                    <div class="left_icons">
+                        <a href="" class="link_href">
+                            <div class="icon">
+                                <img src="/author/icon/facebook.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a href="" class="link_href">
+                            <div class="icon">
+                                <img src="/author/icon/instagram.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a href="" class="link_href">
+                            <div class="icon">
+                                <img src="/author/icon/linkedin.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a href="" class="link_href">
+                            <div class="icon">
+                                <img src="/author/icon/twitter.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        <a href="" class="link_href">
+                            <div class="icon">
+                                <img src="/author/icon/Youtube.svg" alt="" class="icon-1">
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="left_2_1">
+                        <div class="key_age">
+                            Age:
+                        </div>
+                        <div class="value_age">
+                            <%-user.age%>
+                        </div>
+                    </div>
+                    <div class="left_2_1">
+                        <div class="key_age">
+                            Residence:
+                        </div>
+                        <div class="value_age">
+                            <%- user.residence %>
+                        </div>
+                    </div>
+                    <div class="left_2_1">
+                        <div class="key_age">
+                            Freelance:
+                        </div>
+                        <div class="value_age text-success">
+                            <%- user.freelance%>
+                        </div>
+                    </div>
+                    <div class="left_2_1">
+                        <div class="key_age">
+                            Address:
+                        </div>
+                        <div class="value_age">
+                            <%- user.address%>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <h1 class="fs-4 mb-3">Languages</h1>
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.languages[0].lang%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.languages[0].progress%>
+                        </div>
+
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="218" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.languages[1].lang%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.languages[1].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="180" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.languages[2].lang%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.languages[2].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="150" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <h1 class="fs-4 mb-3">Skills</h1>
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.skills[0].skill%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.skills[0].progress%>
+                        </div>
+
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="200" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.skills[1].skill%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.skills[1].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="190" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.skills[2].skill%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.skills[2].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="180" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.skills[3].skill%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.skills[3].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="175" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+
+                    <div class="lang_1 d-flex justify-content-between fs-6">
+                        <div class="lang">
+                            <%- user.skills[4].skill%>
+                        </div>
+                        <div class="lang_per">
+                            <%- user.skills[4].progress%>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="222" height="6" viewBox="0 0 222 6" fill="none">
+                        <rect x="0.75" y="0.75" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+                        <rect x="2" y="2" width="185" height="2" rx="1" fill="#FFB400"/>
+                    </svg>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <h1 class="fs-4">Extra Skills</h1>
+                    <div class="left_5_1 d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                            <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                        </svg>
+                        <p class="fs-6">Bootstrap, Materialize</p>
+                    </div>
+
+                    <div class="left_5_1 d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                            <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                        </svg>
+                        <p class="fs-6">Stylus, Sass, Less</p>
+                    </div>
+
+                    <div class="left_5_1 d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                            <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                        </svg>
+                        <p class="fs-6">Gulp, Webpack, Grunt</p>
+                    </div>
+
+                    <div class="left_5_1 d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+                            <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+                        </svg>
+                        <p class="fs-6">GIT Knowledge</p>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <a href="/author/images/user.jpg" download class="hraf_link ms-5">
+                    <img src="/author/btn_icon/CV2.png" alt="">
+                </a>
+            </div>
+            <div class="mdd_frame">
+                <!-- About Me -->
+                <div class="wrapper">
+                    <div class="star_1"></div>
+                    <div class="star_2"></div>
+                    <div class="star_3"></div>
+                    <div class="star_4"></div>
+                    <div class="star_5"></div>
+                    <div class="star_6"></div>
+                    <div class="star_7">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none">
+                            <path d="M1.80385 11L7 2L12.1962 11H1.80385Z" stroke="#FF2E00" stroke-opacity="0.8" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="about_user d-flex bg-white ps-5 pt-3  pe-4 rounded gap-5">
+                        <div class="about_info w-50">
+                            <h1 class="fs-1 mt-4">I'm Abdujalol Nabijonov <span class="text-warning">Front-end & Back-end Full Stack</span>Web Developer</h1>
+                            <p class="fs-6 mt-4 mb-4 font-monospace">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator.</p>
+                            <a href="" class="hraf_link">
+                                <img src="/author/btn_icon/hire_me.png" alt="btn_hire">
+                            </a>
+                        </div>
+                        <div class="about_picture">
+                            <img src="/author/images/introduce.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Services -->
+                <div class="my_services">
+                    <div class="service_info text-center">
+                        <div class="title mb-3 fs-2 fw-bold">My Services</div>
+                        <div class="subtitle w-50 m-auto mb-5">
+                            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem Ipsum Generator.
+                        </div>
+                    </div>
+                    <div class="services_list">
+                        <div class=" d-flex card_service gap-3">
+                            <div class="card  text-center">
+                                <img src="/author/icon/srv1.svg" width="68px" height="64px" class="mt-4 mb-4">
+                                <div class="card-title fw-bold fs-5">
+                                    Web Development
+                                </div>
+                                <div class="card-text fs-6">
+                                    Blog, E-commerce
+                                </div>
+                            </div>
+                            <div class="card  text-center">
+                                <img src="/author/icon/srv2.svg" width="68px" height="64px" class="mt-4 mb-4">
+                                <div class="card-title fw-bold fs-5">
+                                    UI/UX Design
+                                </div>
+                                <div class="card-text fs-6">
+                                    Mobile App, Website Design
+                                </div>
+                            </div>
+                            <div class="card  text-center">
+                                <img src="/author/icon/srv3.svg" width="68px" height="64px" class="mt-4 mb-4">
+                                <div class="card-title fw-bold fs-5">
+                                    Sound Design
+                                </div>
+                                <div class="card-text fs-6">
+                                    Voice Over, Beat Making
+                                </div>
+                            </div>
+                            <div class="card  text-center">
+                                <img src="/author/icon/srv4.svg" width="68px" height="64px" class="mt-4 mb-4">
+                                <div class="card-title fw-bold fs-5">
+                                    Game Design
+                                </div>
+                                <div class="card-text fs-6">
+                                    Character Design, Props & Objects
+                                </div>
+                            </div>
+                            <div class="card  text-center">
+                                <img src="/author/icon/srv5.svg" width="68px" height="64px" class="mt-4 mb-4">
+                                <div class="card-title fw-bold fs-5">
+                                    Photography
+                                </div>
+                                <div class="card-text fs-6">
+                                    Portrait, Product Photography
+                                </div>
+                            </div>
+                            <div class="card  text-center">
+                                <div class="card-title fw-bold fs-5 mt-3">
+                                    Advertising
+                                </div>
+                                <div class="card-text fs-6 p-3">
+                                    Lorem ipsum is placeholder for previewing layouts and visual mockups. Lorem Ipsum Generator.
+                                </div>
+                                <a href="" class="text-transformation-0 text-warning fw-bold mt-3">ORDER NOW ></a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_frame">
+                <div class="navbar-nav mt-5 big_gap align-items-center">
+                    <div class="navbar-brand">
+                        <a href="">
+                            <img src="/author/icon/contrast.svg" alt="">
+                        </a>
+                    </div>
+                    <ol class="navbar-nav gap-5">
+                        <li class="nav-item right-icon active"><a href="" class="nav-link "><img src="/author/icon/home.svg" alt=""></a></li>
+                        <li class="nav-item right-icon"><a href="" class="nav-link"><img src="/author/icon/iconpt.svg" alt=""></a></li>
+                        <li class="nav-item right-icon"><a href="" class="nav-link"><img src="/author/icon/file-code.svg" alt=""></a></li>
+                        <li class="nav-item right-icon"><a href="" class="nav-link"><img src="/author/icon/blog.svg" alt=""></a></li>
+                        <li class="nav-item right-icon"><a href="" class="nav-link"><img src="/author/icon/cv.svg" alt=""></a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>

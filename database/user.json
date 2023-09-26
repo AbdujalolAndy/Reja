@@ -1,0 +1,12 @@
+{
+    "name":"Abdujalol, Nabijonov",
+    "profession":"Software Engineer",
+    "age":"22",
+    "residence":"DB",
+    "freelance":"Available",
+    "address":"Yeosu-si, Korea",
+    "languages":[{"lang":"Uzbek","progress":"100%"},{"lang":"English","progress":"80%"},{"lang":"Russian","progress":"60%"}],
+    "skills":[{"skill":"Html","progress":"90%"},{"skill":"CSS","progress":"85%"},{"skill":"JS","progress":"80%"},{"skill":"Python","progress":"75%"},{"skill":"MERN Stack","progress":"85%"}],
+    "extra-skills":["Bootstrap, Materialize","Styling, Sass","Python","GIT Knowledge"],
+    "work_place":"IT Company"
+}
