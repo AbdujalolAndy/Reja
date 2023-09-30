@@ -29,7 +29,7 @@ app.set("view engine", "ejs");
 
 //4 Routing code
 app.get('/',(req,res) => {
-  console.log('user entered /')
+  console.log('user entered /');
   db.collection('plans')
     .find()
     .toArray((err, data) => {
@@ -42,15 +42,15 @@ app.get('/',(req,res) => {
 })
   // res.json({test:"success"})
 app.post('/create-form',(req,res) => {
-  console.log('user entered /create-form')
+  console.log('user entered /create-form');
   console.log(req.body);
   const new_reja = req.body.reja
   db.collection('plans').insertOne({reja: new_reja}, (err,data)=>{
     if(err){
       console.log(err);
-      res.end('Something went wrong')
+      res.end('Something went wrong');
     }else{
-      res.end('successfully added')
+      res.end('successfully added');
     }
   })
 })
