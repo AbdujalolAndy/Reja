@@ -14,12 +14,23 @@
             <div class="jumbotron p-3 shadow-sm rounded mt-4">
                 <form id="create-form" action="/create-form" method="post">
                     <div class="d-flex align-items-center gap-2 p-3 rounded">
-                        <input type="text" name="item" class="form-control mr-3" autofocus >
+                        <input type="text" name="reja" class="form-control mr-3" autofocus >
                         <button class="btn btn-outline-success  rounded-pill ps-5 pe-5">Add</button>
                     </div>
-                    
                 </form>
             </div>
+            <ul class="item-list list-group pt-5">
+                <% items.map((item) => { %>
+                    <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+                        <span class="item-text"><%= item.reja %></span>
+                        <div>
+                            <button data-id="<%= item._id %>" class="edit-me btn btn-secondary btn-sm mr-1">Change</button>
+                            <button data-id="<%= item._id %>" class="delete-me btn btn-danger btn-sm">Delete</button>
+                        </div>
+                    </li>
+                <% }) %>
+            </ul>
+            
         </div>
     </header>
 </body>
