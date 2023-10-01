@@ -1,7 +1,8 @@
 const http = require("http");
 const mongodb = require('mongodb');
 
-const connectData = 'mongodb+srv://andy:DO2X0jYmpEjiSBBZ@cluster.clfkuth.mongodb.net/Reja';
+const connectData = 'mongodb+srv://andy:bav52w6vfTXIq5Cy@cluster0.4ahexgk.mongodb.net/Reja';
+
 
 mongodb.connect(connectData, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
     if (err) {
