@@ -30,9 +30,8 @@ document.getElementById("create-form").addEventListener("submit", (event) => {
 });
 
 document.addEventListener("click", (event) => {
-  alert("Tugma bosildi");
-  if (confirm("Rostan ham o'chirmoqchimisz")) {
-    if (event.target.classList.contains("delete-me")) {
+  if (event.target.classList.contains("delete-me")) {
+    if (confirm("Rostan ham o'chirasizmi")) {
       const data_id = event.target.getAttribute("data-id");
       axios
         .post("/find-id", { id: data_id })
@@ -40,7 +39,7 @@ document.addEventListener("click", (event) => {
           event.target.parentElement.parentElement.remove();
         })
         .catch((err) => alert("Iltimos qayta urinib korin"));
+      alert("Deleted Successfully");
     }
-    alert("Deleted Successfully");
   }
 });
