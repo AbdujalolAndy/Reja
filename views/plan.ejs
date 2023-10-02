@@ -12,14 +12,14 @@
         <div class="container">
             <h1 class="fs-4 py-1">Reja va Maqsadlar</h1>
             <div class="jumbotron p-3 shadow-sm rounded mt-4">
-                <form id="create-form" action="/create-form" method="post">
+                <form id="create-form" action="/create-item" method="post">
                     <div class="d-flex align-items-center gap-2 p-3 rounded">
-                        <input type="text" name="reja" class="form-control mr-3" autofocus >
+                        <input type="text" name="reja" class="form-control mr-3" autofocus id="input-field">
                         <button class="btn btn-outline-success  rounded-pill ps-5 pe-5">Add</button>
                     </div>
                 </form>
             </div>
-            <ul class="item-list list-group pt-5">
+            <ul class="item-list list-group pt-5" id="item-list">
                 <% items.map((item) => { %>
                     <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
                         <span class="item-text"><%= item.reja %></span>
@@ -33,5 +33,8 @@
             
         </div>
     </header>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/JS/browser.js"></script>
 </body>
 </html>
