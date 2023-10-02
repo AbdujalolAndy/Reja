@@ -48,7 +48,7 @@ app.post("/create-item", (req, res) => {
   });
 });
 
-app.post("/find-id", (req, res) => {
+app.post("/delete-item", (req, res) => {
   const id = req.body.id;
   db.collection("plans").deleteOne(
     { _id: new mongodb.ObjectId(id) },
@@ -56,6 +56,30 @@ app.post("/find-id", (req, res) => {
       res.json({ state: "successfull" });
     }
   );
+});
+
+app.post("/update-item", (req, res) => {
+  const data = req.body;
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { reja: data.new_item } },
+    (err, data) => {
+      if (err) {
+        console.log("Error");
+      } else {
+        res.json({ state: "Successfull" });
+      }
+    }
+  );
+});
+
+app.post("/delete-all", (req, res) => {
+  const delete_all = req.body.delete_all;
+  if (delete_all) {
+    db.collection("plans").deleteMany((err, data) => {
+      res.json({ state: "success" });
+    });
+  }
 });
 
 app.get("/author", (req, res) => {

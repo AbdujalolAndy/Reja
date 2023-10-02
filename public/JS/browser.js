@@ -34,7 +34,7 @@ document.addEventListener("click", (event) => {
     if (confirm("Rostan ham o'chirasizmi")) {
       const data_id = event.target.getAttribute("data-id");
       axios
-        .post("/find-id", { id: data_id })
+        .post("/delete-item", { id: data_id })
         .then((response) => {
           event.target.parentElement.parentElement.remove();
         })
@@ -42,4 +42,33 @@ document.addEventListener("click", (event) => {
       alert("Deleted Successfully");
     }
   }
+
+  if (event.target.classList.contains("edit-me")) {
+    const userInput = prompt(
+      "O'zgartirish kiriting!",
+      event.target.parentElement.parentElement.querySelector(".item-text")
+        .innerHTML
+    );
+    const data_id = event.target.getAttribute("data-id");
+    axios
+      .post("/update-item", { id: data_id, new_item: userInput })
+      .then((response) => {
+        event.target.parentElement.parentElement.querySelector(
+          ".item-text"
+        ).innerHTML = userInput;
+      })
+      .catch((err) => {
+        alert("Iltimos qayta urinib korin");
+      });
+  }
 });
+document
+  .getElementsByClassName("delete-all")[0]
+  .addEventListener("click", (e) => {
+    axios
+      .post("/delete-all", { delete_all: true })
+      .then((response) => {
+        document.location.reload();
+      })
+      .catch((err) => alert("qayta urinib ko'rin"));
+  });
