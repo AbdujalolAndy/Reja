@@ -28,3 +28,19 @@ document.getElementById("create-form").addEventListener("submit", (event) => {
       console.log("Iltimos qayta urinib korin");
     });
 });
+
+document.addEventListener("click", (event) => {
+  alert("Tugma bosildi");
+  if (confirm("Rostan ham o'chirmoqchimisz")) {
+    if (event.target.classList.contains("delete-me")) {
+      const data_id = event.target.getAttribute("data-id");
+      axios
+        .post("/find-id", { id: data_id })
+        .then((response) => {
+          event.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => alert("Iltimos qayta urinib korin"));
+    }
+    alert("Deleted Successfully");
+  }
+});

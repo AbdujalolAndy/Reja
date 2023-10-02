@@ -10,8 +10,6 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
     user = JSON.parse(data);
   }
 });
-//MongoDB
-
 //1 Kirish code
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -20,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //2 MongoDB
 const db = require("./server").db();
-
+const mongodb = require("mongodb");
 //3 Views code
 app.set("views", "views");
 app.set("view engine", "ejs");
@@ -48,6 +46,16 @@ app.post("/create-item", (req, res) => {
     console.log(data.ops[0]);
     res.json(data.ops[0]);
   });
+});
+
+app.post("/find-id", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    (err, data) => {
+      res.json({ state: "successfull" });
+    }
+  );
 });
 
 app.get("/author", (req, res) => {
